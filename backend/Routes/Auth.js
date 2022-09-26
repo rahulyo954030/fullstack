@@ -22,7 +22,7 @@ authRouter.post("/login", async(req,res)=>{
     if(validUser.length <1 || !validUser ){
         return res.status(401).send({message: "Invalid Credentials"})
     }
-    return res.status(201).send({message: "login successfully"})
+    return res.status(201).send({message: "login successfully",token : 12345})
 })
 
  module.exports = authRouter

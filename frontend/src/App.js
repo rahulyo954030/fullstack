@@ -1,10 +1,15 @@
 import './App.css';
-import Signup from './pages/Signup';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
 
 function App() {
   return (
     <div className="App">
-     <Signup/>
+     {/* <Signup/> */}
+     {/* <Login/> */}
+     <Routes>
+      
+     </Routes>
     </div>
   );
 }

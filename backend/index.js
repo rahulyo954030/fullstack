@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const authRouter = require("./Routes/Auth")
+const connection =require("./db/db")
 
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
@@ -14,6 +15,7 @@ app.get("/", async(req,res) => {
   })
 
 
-app.listen(8080,()=>{
+app.listen(8080,async()=>{
+ await connection
     console.log("server started on http://localhost:8080")
 })

@@ -1,0 +1,34 @@
+body{
+    background-color: whitesmoke;
+}
+.signup_form_container{
+    /* border: 1px solid; */
+    padding: 2% 35%;
+}
+.signup_form{
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 100%;
+    padding: 5% 0%;
+    border-radius: 12px;
+    box-shadow: 2px 1px 2px 1px gray;
+}
+.signup_form input,select{
+    width: 70%;
+    padding: 1% 1%;
+    
+}
+.signup_form>h3, h5{
+    text-align: left;
+    padding-left: 15%;
+    margin-top: 2%;
+}
+.signupbutton{
+    margin-top: 4%;
+    background-color: #f2ca67;
+    border-radius: 6px;
+}
+.signupbutton:hover{
+    
+    background-color: #f1c557;
+}

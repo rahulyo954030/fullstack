@@ -6,13 +6,14 @@ body{
     padding: 2% 35%;
 }
 .signup_form{
-    /* border: 1px solid red; */
+    margin-top: 1%;
     background-color: white;
     width: 100%;
     padding: 5% 0%;
     border-radius: 12px;
     box-shadow: 2px 1px 2px 1px gray;
 }
+
 .signup_form input,select{
     width: 70%;
     padding: 1% 1%;
@@ -25,10 +26,31 @@ body{
 }
 .signupbutton{
     margin-top: 4%;
+    height: 40px;
     background-color: #f2ca67;
     border-radius: 6px;
+    font-weight: bold;
 }
 .signupbutton:hover{
     
     background-color: #f1c557;
+}
+.show_hide_password_container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;  
+}
+.show_hide_password>img{
+ width: 26px;
+ position: absolute;
+ left: 79.5%;
+ margin-top: 2px;
+ cursor: pointer;
+}
+.createteaccountmsg{
+    margin-top: 2%;
+    color: blue;
+    font-size: 13px;
+
 }

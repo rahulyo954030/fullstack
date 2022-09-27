@@ -23,12 +23,12 @@ const Signup = () => {
   };
   const submit = (e) => {
     e.preventDefault();
-    console.log(signupdata);
+    // console.log(signupdata);
     setSignupdata({ ...initialdata });
     axios
       .post("http://localhost:8080/auth/signup", signupdata)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setSignupdata({ ...initialdata });
         navigate("/login");
       })
@@ -45,6 +45,7 @@ const Signup = () => {
           name="name"
           value={signupdata.name}
           onChange={handlechange}
+          required
         />
         <br />
         <h5>Username</h5>
@@ -54,6 +55,7 @@ const Signup = () => {
           name="username"
           value={signupdata.username}
           onChange={handlechange}
+          required
         />
         <br />
         <h5>Email</h5>
@@ -63,6 +65,7 @@ const Signup = () => {
           name="email"
           value={signupdata.email}
           onChange={handlechange}
+          required
         />
         <br />
         <h5>Password</h5>
@@ -72,6 +75,7 @@ const Signup = () => {
           name="password"
           value={signupdata.password}
           onChange={handlechange}
+          required
         />
         <br />
         <h5>Mobile</h5>
@@ -81,6 +85,7 @@ const Signup = () => {
           name="mobile"
           value={signupdata.mobile}
           onChange={handlechange}
+          required
         />
         <br />
         <h5>Country</h5>
@@ -90,9 +95,10 @@ const Signup = () => {
           name="country"
           value={signupdata.country}
           onChange={handlechange}
+          required
         />
         <h5>Gender</h5>
-        <select name="gender" value={signupdata.gender} onChange={handlechange}>
+        <select name="gender" value={signupdata.gender} onChange={handlechange} required>
           <option>Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
@@ -100,6 +106,7 @@ const Signup = () => {
         </select>
         <br />
         <input className="signupbutton" type="submit" value="SIGN UP" />
+        <p className="createteaccountmsg" onClick={()=>navigate("/login")}>Click here if you have already an account</p>
       </form>
     </div>
   );

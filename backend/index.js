@@ -17,8 +17,8 @@ app.get("/", async(req,res) => {
       res.send("users here")
   })
 
-
-app.listen(8080,async()=>{
+  const PORT = process.env.PORT || 8080 
+app.listen(PORT,async()=>{
  await connection
-    console.log("server started on http://localhost:8080")
+    console.log(`server started on http://localhost:${PORT}`)
 })

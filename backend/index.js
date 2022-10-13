@@ -13,12 +13,11 @@ app.use(cors({
   origin:["http://localhost:3000"]
 }))
 app.get("/", async(req,res) => {
-    // const user = await userModel.find()
       res.send("users here")
   })
 
   const PORT = process.env.PORT || 8080 
-app.listen(PORT,async()=>{
- await connection
-    console.log(`server started on http://localhost:${PORT}`)
+app.listen(PORT,()=>{
+  connection;
+    console.log("server started on  http://localhost:8080")
 })
